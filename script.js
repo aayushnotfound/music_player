@@ -65,6 +65,7 @@ setTimeout(() => {
 
 
 function addSong(s, p) {
+
     // iofs = index of song
     let iofs = songs.indexOf(s)
 
@@ -101,6 +102,10 @@ function addSong(s, p) {
     newSongitem.appendChild(song)
     newSongitem.appendChild(circle)
     newSongitem.appendChild(rembtn)
+    if (a.src == 'https://aayushnotfound.github.io/music_player/'){
+        a.src = `songs/${playlist[index]}`
+        console.log('worked')
+    }
 }
 
 function delSong(songSrc) {
@@ -248,7 +253,7 @@ function progressBar() {
 
 
     //loading part
-    if (a.buffered.length == 0 && a.src != 'https://aayushnotfound.github.io/music_player/songs/') {
+    if (a.src == 'https://aayushnotfound.github.io/music_player/') {
         loading.style.display = 'block'
         main_bar.style.display = 'none'
         black_bar.style.display = 'none'

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="changebtn" onclick="changebtn()"></button>
+    <div id="songs">
+        <h2 id="songs_head">Add songs to playlist</h2>
+    </div>
+    <div id="MyPlaylist">
+        <h1 id="playlist_head">My playlist</h1>
+        <div id="playlist"></div>
+        <div id="savebtndiv" class="flexcenter">
+            <button id="savebtn" onclick="savePlaylist()">Save Playlist</button>
+        </div>
+        <div id="bardiv">
+            <p id="currTime"></p>
+            <div id="loading">Loading...</div>
+            <div id="black-bar">
+                <div id="main-bar"></div>
+            </div>
+
+
+            <p id="duration"></p>
+        </div>
+        <div id="btndiv" class="flexcenter">
+            <button class="btn" id="shufflebtn" onclick="shuffle()"></button>
+            <button class="btn" id="prevbtn"></button>
+            <button class="btn" id="playbtn"></button>
+            <button class="btn" id="nextbtn"></button>
+            <button class="btn" id="clearbtn" onclick="clearPlaylist(true)"></button>
+        </div>
+    </div>
+    <div id="playing">
+        <h1 id="playing_head">Thumbnail</h1>
+        <div id="playing_img"></div>
+        <h2 id="playing_name">Song_name</h2>
+    </div>
+    <audio src="" id="audio" onended="next()"></audio>
+</body>
+<script src="script.js"></script>
+</html>

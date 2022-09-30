@@ -248,7 +248,7 @@ function progressBar() {
 
 
     //loading part
-    if (a.buffered.length == 0 && a.src != '') {
+    if (a.buffered.length == 0 && a.src != 'https://aayushnotfound.github.io/music_player/songs/') {
         loading.style.display = 'block'
         main_bar.style.display = 'none'
         black_bar.style.display = 'none'

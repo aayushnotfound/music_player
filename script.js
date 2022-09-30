@@ -14,8 +14,6 @@ let MyPlaylist = document.getElementById('MyPlaylist')
 let songsdiv = document.getElementById('songs')
 const playlistDiv = document.getElementById('playlist')
 const allSongsDiv = document.getElementById('songs')
-// port
-const PORT = 8000
 
 // adding event listners
 document.getElementById('playbtn').addEventListener('click', () => { playBtnFunc(index) })
@@ -155,7 +153,7 @@ function playBtnFunc(index, p) {
     }
     else {
         // if the source is already set according to the index then just play the song
-        if (a.src == `http://127.0.0.1:5500/web_ver/songs/${encodeURI(playlist[index])}`) {
+        if (a.src == `https://aayushnotfound.github.io/music_player/songs/${encodeURI(playlist[index])}`) {
             a.play()
             // console.log('played')
         }
